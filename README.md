@@ -8,7 +8,7 @@ We have created a tiled image and mask dataset from the original large size imag
 Breast Cancer Semantic Segmentation (BCSS) dataset
 </a>
 
-<br><br>
+<br>
 The pixel-size of the original images and masks in 
 image and mask BCSS dataset is from 2K to 7K, 
 and too large to use for a training of an ordinary segmentation model.
@@ -18,7 +18,7 @@ which can be used for a segmentation model.
 By training a segmentation model by the new tiled dataset, we will try to improve segmentation accuracy for the 
 large Skin-Cancer images of 4K or 6K pixel size.<br>   
  -->
-<br><br>
+<br>
 
 For example, an image and mask of 4090x4090 pixel-size can be split to the tiles as shown below.<br>
 <hr>
@@ -168,7 +168,7 @@ angioinvasion           19
 dcis                    20
 other                   21
 </pre>
-As shown above, a lot of labels included. For simplicity, we have created ImageMask Dataset for Tumor.<br>
+As shown above, a lot of labels is included in it. However, for simplicity, we created ImageMask Dataset for <b>Tumor</b>.<br>
 
 <h3>3. Create Mostly-Tumor Dataset</h3>
 To create Mostly Tumor ImateMask dataset, please run the following command for Python script, 
