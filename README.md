@@ -8,17 +8,13 @@ We have created a tiled image and mask dataset from the original large size imag
 Breast Cancer Semantic Segmentation (BCSS) dataset
 </a>
 
-<br><br>
+<br>
 The pixel-size of the original images and masks in 
 image and mask BCSS dataset is from 2K to 7K, 
 and too large to use for a training of an ordinary segmentation model.
 Therefore we have created a dataset of images and masks, split into small tiles of 512x512 pixels, 
 which can be used for a segmentation model.  
-<!--
-By training a segmentation model by the new tiled dataset, we will try to improve segmentation accuracy for the 
-large Skin-Cancer images of 4K or 6K pixel size.<br>   
- -->
-<br><br>
+<br>
 
 For example, an image and mask of 4090x4090 pixel-size can be split to the tiles as shown below.<br>
 <hr>
@@ -180,22 +176,25 @@ To create Mostly Tumor ImateMask dataset, please run the following command for P
 This script executes the following image processing to create Tumor-ImageMask-Dataset.<br>
 
 Processing for image files in images folder:<br>
-1. Read a png image file in images folder of BCSS.<br> 
-2. Resize the width and height of the image to be a minimum integral multiple of 512 respectively.<br>
-3. Save the resize image as a jpg file.<br>
-<br>
+<pre>
+1. Read a png image file in images folder of BCSS.
+2. Resize the width and height of the image to be a minimum integral multiple of 512 respectively.
+3. Save the resize image as a jpg file.
+</pre>
 Processing for the json files in annotations folder:<br>
-1. Read a json_file in annotations folder of BCSS.<br>
-2. Parse the json data, and get a header part of the data.<br>
-3. Get center, image_width, image_height from the header part.<br>
-4. Create an empty mask of image_width and imagte_height.<br>
-5. Find <b>mostly_tumor</b> group in a body part of the json data.<br>
-6. Get a set of <b>points</b> of a polygon which represents a mostly_tumor region.<br>
-7. Fill the mask with the set of points as a polygon.<br>
-8. Resize the width and height of the mask to be a minimum integral multiple of 512 respectively.<br>
-9. Save the resize mask as a jpg file.<br>
-<br>
-By using script, the following dataset will be created.<br>
+<pre>
+1. Read a json_file in annotations folder of BCSS.
+2. Parse the json data, and get a header part of the data.
+3. Get center, image_width, image_height from the header part.
+4. Create an empty mask of image_width and imagte_height.
+5. Find <b>mostly_tumor</b> group in a body part of the json data.
+6. Get a set of <b>points</b> of a polygon which represents a mostly_tumor region.
+7. Fill the mask with the set of points as a polygon.
+8. Resize the width and height of the mask to be a minimum integral multiple of 512 respectively.
+9. Save the resize mask as a jpg file.
+</pre>
+
+By using this script, the following dataset will be created.<br>
 <pre>
 ./BCSS-Mostly-Tumor-master
 ├─images       ; JPG image files
