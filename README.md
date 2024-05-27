@@ -38,7 +38,7 @@ Image
 </tr>
 </table>
 <br>
-<b>Tiled Image and Mask</b>
+<b>Tiledly Split Images and Masks</b>
 <table>
 <!--
 <tr>
