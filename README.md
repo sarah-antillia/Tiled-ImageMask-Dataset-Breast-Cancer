@@ -166,7 +166,7 @@ other                   21
 As shown above, a lot of labels is included in it. However, for simplicity, we will create ImageMask Dataset for <b>Tumor</b>.<br>
 
 <h3>3. Create Mostly-Tumor Dataset</h3>
-To create Mostly Tumor ImateMask dataset, please run the following command for Python script, 
+To create Mostly Tumor ImageMask dataset, please run the following command for Python script, 
 <a href="./ImageMaskDatasetGenerator.py">ImageMaskDatasetGenerator.py</a>.<br>
 <pre>
 >python ImageMaskDatasetGenerator.py
