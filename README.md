@@ -102,7 +102,7 @@ Breast Cancer Semantic Segmentation (BCSS) dataset
 </a>
 <br><br>
 Please set up Python environemnt to download BCSS dataset. 
-If you would like download all dataset, <b>images, masks, annotations</b>, probably you will have to modify <b>PIPELINE </b>
+If you would like to download all dataset, <b>images, masks, annotations</b>, probably you will have to modify <b>PIPELINE </b>
 in config.py file as shown below.<br>
 <pre>
 # What things to download? -- comment out whet you dont want
