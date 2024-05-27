@@ -114,7 +114,7 @@ PIPELINE = (
 </pre>
 Please run the following command to download the BCSS dataset <br>
 <pre>
->python python download_crowdsource_dataset.py
+>python download_crowdsource_dataset.py
 </pre>
 , by which the following folders will be created.<br> 
 <pre>
