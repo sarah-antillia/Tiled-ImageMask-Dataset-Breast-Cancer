@@ -164,7 +164,7 @@ angioinvasion           19
 dcis                    20
 other                   21
 </pre>
-As shown above, a lot of labels included. For simplicity, we have created ImageMask Dataset for Tumor.<br>
+As shown above, a lot of labels is included in it. However, for simplicity, we will create ImageMask Dataset for <b>Tumor</b>.<br>
 
 <h3>3. Create Mostly-Tumor Dataset</h3>
 To create Mostly Tumor ImateMask dataset, please run the following command for Python script, 
