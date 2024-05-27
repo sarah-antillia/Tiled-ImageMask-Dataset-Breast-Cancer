@@ -126,10 +126,10 @@ Please run the following command to download the BCSS dataset <br>
 </pre>
 
 <hr>
-BCSS images<br>
+BCSS images sample<br>
 <img src="./asset/bcss_images_sample.png" width=1024 height="auto"><br><br>
 
-BCSS masks normalized by us<br>
+BCSS masks sample normalized by us<br>
 <img src="./asset/bcss_normalized_masks_sample.png" width=1024 height="auto"><br><br>
 
 <hr>
@@ -201,7 +201,7 @@ By using this script, the following dataset will be created.<br>
 </pre>
 
 <hr>
-Generated images sample<br>
+Generateds images sample<br>
 <img src="./asset/images_sample.png" width=1024 height="auto"><br><br>
 
 Generated mostly_tumor masks sample<br>
