@@ -16,7 +16,7 @@ Therefore we have created a dataset of images and masks, split into small tiles 
 which can be used for a segmentation model.  
 <br>
 
-For example, an image and mask of 4090x4090 pixel-size can be split to the tiles as shown below.<br>
+For example, an image and mask of 4090x4090 pixel-size in BCSS can be split to a lot of tiles of 512x512 as shown below.<br>
 <hr>
 <b>Image and Mask</b>
 <table>
