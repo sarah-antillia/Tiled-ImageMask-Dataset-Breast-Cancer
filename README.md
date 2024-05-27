@@ -60,7 +60,6 @@ Tiled-Image
 </table>
 <hr>
 
-<hr>
 
 <br>
 <b>Download Tiled-Image-Mask-Dataset</b><br>
