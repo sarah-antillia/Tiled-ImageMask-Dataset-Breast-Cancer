@@ -8,7 +8,7 @@ We have created a tiled image and mask dataset from the original large size imag
 Breast Cancer Semantic Segmentation (BCSS) dataset
 </a>
 
-<br>
+<br><br>
 The pixel-size of the original images and masks in 
 image and mask BCSS dataset is from 2K to 7K, 
 and too large to use for a training of an ordinary segmentation model.
@@ -179,7 +179,7 @@ Processing for image files in images folder:<br>
 <pre>
 1. Read a png image file in images folder of BCSS.
 2. Resize the width and height of the image to be a minimum integral multiple of 512 respectively.
-3. Save the resize image as a jpg file.
+3. Save the resized image as a jpg file.
 </pre>
 Processing for the json files in annotations folder:<br>
 <pre>
@@ -191,7 +191,7 @@ Processing for the json files in annotations folder:<br>
 6. Get a set of <b>points</b> of a polygon which represents a mostly_tumor region.
 7. Fill the mask with the set of points as a polygon.
 8. Resize the width and height of the mask to be a minimum integral multiple of 512 respectively.
-9. Save the resize mask as a jpg file.
+9. Save the resized mask as a jpg file.
 </pre>
 
 By using this script, the following dataset will be created.<br>
