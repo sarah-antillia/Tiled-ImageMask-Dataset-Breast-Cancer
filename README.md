@@ -8,7 +8,7 @@ We have created a tiled image and mask dataset from the original large size imag
 Breast Cancer Semantic Segmentation (BCSS) dataset
 </a>
 
-<br>
+<br><br>
 The pixel-size of the original images and masks in 
 image and mask BCSS dataset is from 2K to 7K, 
 and too large to use for a training of an ordinary segmentation model.
@@ -18,7 +18,7 @@ which can be used for a segmentation model.
 By training a segmentation model by the new tiled dataset, we will try to improve segmentation accuracy for the 
 large Skin-Cancer images of 4K or 6K pixel size.<br>   
  -->
-<br>
+<br><br>
 
 For example, an image and mask of 4090x4090 pixel-size can be split to the tiles as shown below.<br>
 <hr>
@@ -168,7 +168,7 @@ angioinvasion           19
 dcis                    20
 other                   21
 </pre>
-As shown above, a lot of labels is included in it. However, for simplicity, we created ImageMask Dataset for <b>Tumor</b>.<br>
+As shown above, a lot of labels included. For simplicity, we have created ImageMask Dataset for Tumor.<br>
 
 <h3>3. Create Mostly-Tumor Dataset</h3>
 To create Mostly Tumor ImateMask dataset, please run the following command for Python script, 
@@ -181,13 +181,12 @@ This script executes the following image processing to create Tumor-ImageMask-Da
 
 Processing for image files in images folder:<br>
 1. Read a png image file in images folder of BCSS.<br> 
-2  Resize the width and height of the image to be a minimum integral multiple of 512 respectively.<br>
+2. Resize the width and height of the image to be a minimum integral multiple of 512 respectively.<br>
 3. Save the resize image as a jpg file.<br>
-
 <br>
 Processing for the json files in annotations folder:<br>
 1. Read a json_file in annotations folder of BCSS.<br>
-2, Parse the json data, and get a header part of the data.<br>
+2. Parse the json data, and get a header part of the data.<br>
 3. Get center, image_width, image_height from the header part.<br>
 4. Create an empty mask of image_width and imagte_height.<br>
 5. Find <b>mostly_tumor</b> group in a body part of the json data.<br>
