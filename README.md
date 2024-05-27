@@ -172,15 +172,15 @@ To create Mostly Tumor ImateMask dataset, please run the following command for P
 >python ImageMaskDatasetGenerator.py
 </pre>
 
-This script executes the following image processing to create Tumor-ImageMask-Dataset.<br>
+This script executes the following image processings to create Tumor-ImageMask-Dataset.<br>
 
-Processing for image files in images folder:<br>
+Processings for image files in images folder:<br>
 <pre>
 1. Read a png image file in images folder of BCSS.
 2. Resize the width and height of the image to be a minimum integral multiple of 512 respectively.
 3. Save the resized image as a jpg file.
 </pre>
-Processing for the json files in annotations folder:<br>
+Processings for the json files in annotations folder:<br>
 <pre>
 1. Read a json_file in annotations folder of BCSS.
 2. Parse the json data, and get a header part of the data.
