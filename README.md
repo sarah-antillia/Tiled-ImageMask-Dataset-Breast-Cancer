@@ -2,7 +2,7 @@
 </h2>
 This is a Tiled-Breast-Cancer ImageMask Dataset for Image-Segmentation.<br>
 <br>
-We have created a tiled image and mask dataset from the original large size image and mask files in 
+We created a tiled image and mask dataset from the original large size image and mask files in 
 
 <a href="https://github.com/PathologyDataScience/BCSS">
 Breast Cancer Semantic Segmentation (BCSS) dataset
@@ -12,7 +12,7 @@ Breast Cancer Semantic Segmentation (BCSS) dataset
 The pixel-size of the original images and masks in 
 image and mask BCSS dataset is from 2K to 7K, 
 and too large to use for a training of an ordinary segmentation model.
-Therefore we have created a dataset of images and masks, split into small tiles of 512x512 pixels, 
+Therefore we created a dataset of images and masks which was split into the small tiles of 512x512 pixels, 
 which can be used for a segmentation model.  
 <br>
 
