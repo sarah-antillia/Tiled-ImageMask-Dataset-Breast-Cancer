@@ -159,6 +159,7 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
+# 2024/05/28
 annotations/
 BCSS-Mostly-Tumor-master/
 images/
@@ -170,3 +171,7 @@ Sample-Tiled-Breast-Cancer/
 Tiled-BCSS-Mostly-Tumor-master/
 Tiled-Breast-Cancer-ImageMask-Dataset-X/
 Tiled-Breast-Cancer-ImageMask-Dataset-X.zip
+
+PreAugmented-Breast-Cancer-master/
+Non-Tiled-Breast-Cancer-ImageMask-Dataset-V1/
+Non-Tiled-Breast-Cancer-ImageMask-Dataset-V1.zip

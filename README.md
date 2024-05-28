@@ -1,6 +1,16 @@
-<h2>Tiled-ImageMask-Dataset-Breast-Cancer (2024/05/27) </h2>
+<h2>Tiled-ImageMask-Dataset-Breast-Cancer (Updated: 2024/05/28) </h2>
 </h2>
-This is a Tiled-Breast-Cancer ImageMask Dataset for Image-Segmentation.<br>
+<li>
+2024/05/28 Added Python script <a href="PreAugmentedImageMaskDatasetGenerator.py">PreAugmentedImageMaskDatasetGenerator.py</a> 
+to create Pre-Augmented-Non-Tiled-Breast-Cancer-ImageMask-Dataset.<br>
+</li>
+<li>
+2024/05/28 Created Pre-Augmented-Non-Tiled-Breast-Cancer-ImageMask-Dataset 
+<a href="https://drive.google.com/file/d/1B3QfYxi52UqyVxcfxnRoGYw79KLIn-XA/view?usp=sharing">Non-Tiled-Breast-Cancer-ImageMask-Dataset-V1.zip.</a>
+</li>
+
+<br>
+This is a Tiled and Non-Tiled Breast Cancer ImageMask Dataset for Image-Segmentation.<br>
 <br>
 We created a tiled image and mask dataset from the original large size image and mask files in 
 
@@ -65,6 +75,12 @@ Tiled-Image
 <b>Download Tiled-Image-Mask-Dataset</b><br>
 You can download our dataset created here from the google drive 
 <a href="https://drive.google.com/file/d/1IedbpmttIgY17pPUbS0uliugD7rlkFJQ/view?usp=sharing">Tiled-Breast-Cancer-ImageMask-Dataset-X.zip</a>
+<br>
+<br>
+<b>Download Pre-Augmented-Non-Tiled-Image-Mask-Dataset</b><br>
+You can download our dataset created here from the google drive 
+<a href="https://drive.google.com/file/d/1B3QfYxi52UqyVxcfxnRoGYw79KLIn-XA/view?usp=sharing">Non-Tiled-Breast-Cancer-ImageMask-Dataset-V1.zip</a>
+
 <br>
 
 <h3>1. Dataset Citation</h3>
@@ -223,7 +239,7 @@ By this command, the following folder will be created.<br>
 </pre>
 
 
-<h3>5. Spit master</h3>
+<h3>5. Split master</h3>
 To split Tiledly-Split-ImageMask-Dataset to test, train, and valid sub datasets,
  please run the following command for Python script, 
 <a href="./split_master.py">split_master.py</a>.<br>
@@ -255,6 +271,54 @@ By this command, the following folder will be created.<br>
 <img src="./asset/train_masks_sample.png"  width="1024" height="auto">
 <br>
 
+
+<h3>6. Create Pre Augmented Non Tiled Dataset</h3>
+To create Pre-Augmented-Non-Tiled-ImageMask-Dataset from <b>BCSS-Mostly-Tumor-master</b> , please run the following command for Python script, 
+<a href="./PreAugmentedImageMaskDatasetGenerator.py">PreAugmentedImageMaskDatasetGenerator.py</a>.<br>
+<pre>
+>python PreAugmentedImageMaskDatasetGenerator.py
+</pre>
+By this command, the following folder will be created.<br>
+<pre>
+./PreAugmented-Breast-Cancer-master
+├─images       ; Pre-augmented image files
+└─masks        : Pre-augmented mask files
+</pre>
+
+
+<h3>7. Split PreAugmented master</h3>
+To split PreAugmented-Breast-Cancer-master to test, train, and valid sub datasets,
+ please run the following command for Python script, 
+<a href="./split_master.py">split_master.py</a>.<br>
+<pre>
+>python split_preaugmented-master.py
+</pre>
+By this command, the following folder will be created.<br>
+<pre>
+./Non-Tiled-Breast-Cancer-ImageMask-Dataset-V1
+├─test
+│  ├─images
+│  └─masks
+├─train
+│  ├─images
+│  └─masks
+└─valid
+    ├─images
+    └─masks
+</pre>
+
+<b>Dataset Statistics</b><br>
+<img src="./Non-Tiled-Breast-Cancer-ImageMask-Dataset-V1_Statistics.png" width="540" height="auto"><br>
+
+<hr>
+<b>train/images samples:</b><br>
+<img src="./asset/non-tiled-train_images_sample.png" width="1024" height="auto">
+<br>
+<b>train/masks samples:</b><br>
+<img src="./asset/non-tiled-train_masks_sample.png"  width="1024" height="auto">
+<br>
+
+<br>
 <h3>Reference</h3>
 <b>1. Structured crowdsourcing enables convolutional segmentation of histology images</b><br>
 Bioinformatics, Volume 35, Issue 18, September 2019, Pages 3461–3467, <br>
