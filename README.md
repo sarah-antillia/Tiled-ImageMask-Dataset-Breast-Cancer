@@ -289,7 +289,7 @@ By this command, the following folder will be created.<br>
 <h3>7. Split PreAugmented master</h3>
 To split PreAugmented-Breast-Cancer-master to test, train, and valid sub datasets,
  please run the following command for Python script, 
-<a href="./split_master.py">split_preaugmented-master.py</a>.<br>
+<a href="./split_preaugmented-master.py">split_preaugmented-master.py</a>.<br>
 <pre>
 >python split_preaugmented-master.py
 </pre>
