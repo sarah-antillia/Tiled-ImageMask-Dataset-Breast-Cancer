@@ -27,8 +27,8 @@ this script creates
  └─masks
 
 
-1 Create tiledly splitted patches (images and masks) of 512x512 from the large image and mask files
-  in ./Large-Skin-Cancer-master, and save them to ./Tiled-Skin-Cancer-master
+1 Create tiledly split patches (images and masks) of 512x512 from the large image and mask files
+  in .//BCSS-Mostly-Tumor-master, and save them to ./Tiled-BCSS-Mostly-Tumor-master
 
 
 

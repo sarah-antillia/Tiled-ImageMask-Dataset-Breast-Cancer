@@ -13,7 +13,8 @@
 # limitations under the License.
 #
 
-# 2024/05/29
+# 2024/05/29 sarah@antillia.com
+
 # PreAugmentedImageMaskDatasetGenerator.py
 
 import os
@@ -31,6 +32,14 @@ from skimage.io import imread
 
 import traceback
 
+  # deform method of this class has been taken from the following code.
+  # https://github.com/MareArts/Elastic_Effect/blob/master/Elastic.py
+  #
+  # https://cognitivemedium.com/assets/rmnist/Simard.pdf
+  #
+  # See also
+  # https://www.kaggle.com/code/jiqiujia/elastic-transform-for-data-augmentation/notebook
+  # 
 class PreAugmentedImageMaskDatasetGenerator:
 
   def __init__(self, augmentation=True):
