@@ -21,7 +21,6 @@ to 512x512, and losing a lot of detailed pixel level information of the cancer r
 Probably, you will have to use both Tiled and Non-Tiled Dataset mixing to train a segmentation model.
 <br>
 
-
 <br>
 We created a tiled image and mask dataset from the original large size image and mask files in 
 
@@ -245,8 +244,8 @@ To create Tiledly-Split-ImageMask-Dataset from <b>BCSS-Mostly-Tumor-master</b> ,
 By this command, the following folder will be created.<br>
 <pre>
 ./Tiled-BCSS-Mostly-Tumor-master
-├─images       ; Tiledly-split image files
-└─masks        : Tiledly-split mask files
+├─images       ; Tiledly-split 512x512 jpg image files
+└─masks        : Tiledly-split 512x512 jpg mask files
 </pre>
 
 
@@ -292,8 +291,8 @@ To create Pre-Augmented-Non-Tiled-ImageMask-Dataset from <b>BCSS-Mostly-Tumor-ma
 By this command, the following folder will be created.<br>
 <pre>
 ./PreAugmented-Breast-Cancer-master
-├─images       ; Pre-augmented image files
-└─masks        : Pre-augmented mask files
+├─images       ; Pre-augmented 512x512 resized jpg image files
+└─masks        : Pre-augmented 512x512 resized jpg mask files
 </pre>
 
 
@@ -322,10 +321,10 @@ By this command, the following folder will be created.<br>
 <img src="./Non-Tiled-Breast-Cancer-ImageMask-Dataset-V1_Statistics.png" width="540" height="auto"><br>
 
 <hr>
-<b>train/images samples:</b><br>
+<b>Non-Tiled train/images samples:</b><br>
 <img src="./asset/non-tiled-train_images_sample.png" width="1024" height="auto">
 <br>
-<b>train/masks samples:</b><br>
+<b>Non-Tiled train/masks samples:</b><br>
 <img src="./asset/non-tiled-train_masks_sample.png"  width="1024" height="auto">
 <br>
 
