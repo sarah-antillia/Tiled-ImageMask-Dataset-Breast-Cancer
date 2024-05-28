@@ -13,11 +13,11 @@ to create Pre-Augmented-Non-Tiled-Breast-Cancer-ImageMask-Dataset.<br>
 This is a Tiled and Non-Tiled Breast Cancer ImageMask Dataset for Image-Segmentation.<br>
 <br>
 <b>Tiled-ImageMask-Dataset</b> is a microscopic annotation dataset which is created by splitting the large images and masks
-of BCSS to 512x512 tiles, and holds the detailed features on the cancer regions.<br>
+of BCSS to 512x512 tiles, and keeping the detailed features on the cancer regions.<br>
 <br>
 <b>Non-Tiled-ImageMask-Dataset</b> is a macroscopic annotation dataset which is created by reducing the size of 
 the large images and masks of BCSS 
-to 512x512, losing a lot of detailed pixel level information of the cancer region.<br><br>
+to 512x512, and losing a lot of detailed pixel level information of the cancer region.<br><br>
 Probably, you will have to use both Tiled and Non-Tiled Dataset mixing to train a segmentation model.
 <br>
 
