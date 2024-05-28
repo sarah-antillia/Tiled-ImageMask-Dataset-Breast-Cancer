@@ -1,4 +1,4 @@
-<h2>Tiled-ImageMask-Dataset-Breast-Cancer (Updated: 2024/05/28) </h2>
+<h2>Tiled-ImageMask-Dataset-Breast-Cancer (Updated: 2024/05/29) </h2>
 </h2>
 <li>
 2024/05/28 Added Python script <a href="PreAugmentedImageMaskDatasetGenerator.py">PreAugmentedImageMaskDatasetGenerator.py</a> 
@@ -8,7 +8,14 @@ to create Pre-Augmented-Non-Tiled-Breast-Cancer-ImageMask-Dataset.<br>
 2024/05/28 Created Pre-Augmented-Non-Tiled-Breast-Cancer-ImageMask-Dataset 
 <a href="https://drive.google.com/file/d/1B3QfYxi52UqyVxcfxnRoGYw79KLIn-XA/view?usp=sharing">Non-Tiled-Breast-Cancer-ImageMask-Dataset-V1.zip.</a>
 </li>
-
+<li>
+2024/05/29 Added Python script <a href="MixedImageMaskDatasetGenerator.py">MixedImageMaskDatasetGenerator.py</a> 
+to create Mixed-Breast-Cancer-ImageMask-Dataset.
+</li>
+<li>
+2024/05/29 Created Mixed-Breast-Cancer-ImageMask-Dataset 
+<a href="https://drive.google.com/file/d/1KBhj2Y-qywXxMXeZpRMPXKIgKT-wY4eP/view?usp=sharing">Mixed-Breast-Cancer-ImageMask-Dataset-M.zip</a>
+</li>
 <br>
 This is a Tiled and Non-Tiled Breast Cancer ImageMask Dataset for Image-Segmentation.<br>
 <br>
@@ -19,6 +26,8 @@ of BCSS to 512x512 tiles, and keeping the detailed features on the cancer region
 the large images and masks of BCSS 
 to 512x512, and losing a lot of detailed pixel level information of the cancer region.<br><br>
 Probably, you will have to use both Tiled and Non-Tiled Dataset mixing to train a segmentation model.
+You may use new experimental <b>Mixed-Breast-Cancer-ImageMask-Dataset</b>
+ <a href="https://drive.google.com/file/d/1KBhj2Y-qywXxMXeZpRMPXKIgKT-wY4eP/view?usp=sharing">Mixed-Breast-Cancer-ImageMask-Dataset-M.zip</a>
 <br>
 
 <br>
@@ -82,16 +91,24 @@ Tiled-Image
 
 
 <br>
-<b>Download Tiled-Image-Mask-Dataset</b><br>
+<b>1. Download Tiled-Image-Mask-Dataset</b><br>
 You can download our dataset created here from the google drive 
 <a href="https://drive.google.com/file/d/1IedbpmttIgY17pPUbS0uliugD7rlkFJQ/view?usp=sharing">Tiled-Breast-Cancer-ImageMask-Dataset-X.zip</a>
 <br>
 <br>
-<b>Download Pre-Augmented-Non-Tiled-Image-Mask-Dataset</b><br>
+<b>2. Download Pre-Augmented-Non-Tiled-Image-Mask-Dataset</b><br>
 You can download our dataset created here from the google drive 
 <a href="https://drive.google.com/file/d/1B3QfYxi52UqyVxcfxnRoGYw79KLIn-XA/view?usp=sharing">Non-Tiled-Breast-Cancer-ImageMask-Dataset-V1.zip</a>
 
 <br>
+<br>
+<b>3. Download Mixed-Image-Mask-Dataset</b><br>
+You can download our dataset created here from the google drive 
+<a href="https://drive.google.com/file/d/1KBhj2Y-qywXxMXeZpRMPXKIgKT-wY4eP/view?usp=sharing">Mixed-Breast-Cancer-ImageMask-Dataset-M.zip</a>
+
+<br>
+<br>
+
 
 <h3>1. Dataset Citation</h3>
 The original dataset used here has been taken from the following github repository.<br>
