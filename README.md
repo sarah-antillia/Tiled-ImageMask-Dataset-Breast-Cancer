@@ -12,7 +12,7 @@ Breast Cancer Semantic Segmentation (BCSS) dataset
 The pixel-size of the original images and masks in 
 image and mask BCSS dataset is from 2K to 7K, 
 and too large to use for a training of an ordinary segmentation model.
-Therefore we created a dataset of images and masks which was split into the small tiles of 512x512 pixels, 
+Therefore we created a dataset of images and masks which were split to the small tiles of 512x512 pixels, 
 which can be used for a segmentation model.  
 <br>
 
