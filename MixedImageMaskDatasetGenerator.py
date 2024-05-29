@@ -15,7 +15,9 @@
 # 2024/05/26 to-arai
 # 2024/05/29 Modified to created ruduced images and mask of 512x512 and
 # augment them.
- 
+# 2024/05/29 sarah@antillia.com
+#  Modfied self.exclude_empty=False to True to avoid an empty mask to be saved.
+
 # MixedImageMaskDatasetGenerator.py
 
 """
@@ -53,18 +55,19 @@ import traceback
 
 class MixedImageMaskDatasetGenerator:
 
-  def __init__(self, split_size=512, include_resized=True, augmentation=True):
+  def __init__(self, split_size=512, exclude_empty=True, include_resized=True, augmentation=True):
     self.seed         = 137
 
     self.split_size   = split_size
     self.resize       = split_size
     self.cut_in_half  = False
-    self.exclude_empty = False
+    # 2024/05/29 Modfied self.exclude_empty=False to True
+    self.exclude_empty = exclude_empty
     self.W             = split_size
     self.H             = split_size
     # 2024/05/29 Include resized images and mask.
     self.include_resized = include_resized
-
+    self.num_skipped   = 0
     # Blur flag
     self.blur         = True
     # GausssinaBlur parameters
@@ -122,10 +125,13 @@ class MixedImageMaskDatasetGenerator:
       self.resize_one(input_masks_dir,  output_masks_dir, output_images_dir, mask=True)
       self.resize_one(input_images_dir, output_masks_dir, output_images_dir, mask=False)
 
-    # Split images
-    self.split_one(input_images_dir, output_masks_dir, output_images_dir, mask=False)
-    # Split masks
+    # 2024/05/29 Exchanged the calling split_one for image and mask
+    # to mask and image, to check an empty mask.
+    # 1. Split masks 1st
     self.split_one(input_masks_dir,  output_masks_dir, output_images_dir, mask=True)
+
+    # 2. Split images 2nd
+    self.split_one(input_images_dir, output_masks_dir, output_images_dir, mask=False)
 
 
   def resize_one(self, input_images_dir, output_masks_dir, output_images_dir,  mask=False):
@@ -380,14 +386,32 @@ class MixedImageMaskDatasetGenerator:
           output_image_filepath = os.path.join(output_images_dir, cropped_image_filename) 
 
           if mask:
-            if self.blur:
-              cropped = cropped.filter(ImageFilter.GaussianBlur(radius = self.blur_ksize2)) 
-            if os.path.exists(output_image_filepath):
-              cropped.save(output_mask_filepath)
-              print("--- Saved {}".format(output_mask_filepath))
+            # 2024/05/29 Modified to exclude an empty black mask
+            if self.exclude_empty:
+              if self.is_not_empty(cropped):
+                if self.blur:
+                  cropped = cropped.filter(ImageFilter.GaussianBlur(radius = self.blur_ksize2)) 
+                cropped.save(output_mask_filepath)
+                print("--- Saved {}".format(output_mask_filepath))
+              else:
+                print("--- Don't save an empty mask")
+                self.num_skipped += 1
+                continue
+            
+            # self.exclude_empty == False
+            else:
+                if self.blur:
+                  cropped = cropped.filter(ImageFilter.GaussianBlur(radius = self.blur_ksize2)) 
+                cropped.save(output_mask_filepath)
+                print("--- Saved {}".format(output_mask_filepath))
+                  
           else:
-            cropped.save(output_image_filepath)
-            print("--- Saved {}".format(output_image_filepath))
+            if os.path.exists(output_mask_filepath):
+              cropped.save(output_image_filepath)
+              print("--- Saved {}".format(output_image_filepath))
+            else:
+              print("--- Don't save an image, because the corresponding mask is empty.")
+
 
   def is_not_empty(self, img):
     rc = False
@@ -415,7 +439,7 @@ From
 
 splitting each image and mask of the dataset above to 512x512 tiled,
 and save those tiledly splitted images and masks under
-./Mixed-BCSS-Mostly-Tumor-master
+./Mixed-BCSS-Mostly-Tumor-master-M2
  ├─images
  └─masks
 
@@ -425,10 +449,12 @@ and save those tiledly splitted images and masks under
 if __name__ == "__main__":
   try:
     input_dir  = "./BCSS-Mostly-Tumor-master"
-    output_dir = "./Mixed-BCSS-Mostly-Tumor-master"
+    output_dir = "./Mixed-BCSS-Mostly-Tumor-master-M2"
     generator = MixedImageMaskDatasetGenerator()
 
     generator.generate(input_dir, output_dir)
     
+    num_skipped = generator.num_skipped
+    print("--- num_skipped {}".format(num_skipped))
   except:
     traceback.print_exc()

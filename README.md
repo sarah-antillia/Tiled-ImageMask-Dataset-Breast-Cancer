@@ -9,13 +9,14 @@ to create Pre-Augmented-Non-Tiled-Breast-Cancer-ImageMask-Dataset.<br>
 <a href="https://drive.google.com/file/d/1B3QfYxi52UqyVxcfxnRoGYw79KLIn-XA/view?usp=sharing">Non-Tiled-Breast-Cancer-ImageMask-Dataset-V1.zip.</a>
 </li>
 <li>
-2024/05/29 Added Python script <a href="MixedImageMaskDatasetGenerator.py">MixedImageMaskDatasetGenerator.py</a> 
-to create Mixed-Breast-Cancer-ImageMask-Dataset.
+2024/05/29 Updated Python script <a href="MixedImageMaskDatasetGenerator.py">MixedImageMaskDatasetGenerator.py</a> 
+to create Mixed-Breast-Cancer-ImageMask-Dataset exluding the empty tiled black masks and the corresponding tiled images.
 </li>
 <li>
-2024/05/29 Created Mixed-Breast-Cancer-ImageMask-Dataset 
-<a href="https://drive.google.com/file/d/1KBhj2Y-qywXxMXeZpRMPXKIgKT-wY4eP/view?usp=sharing">Mixed-Breast-Cancer-ImageMask-Dataset-M.zip</a>
+2024/05/29 Created Mixed-Breast-Cancer-ImageMask-Dataset-M2 
+<a href="https://drive.google.com/file/d/1tkGpCrHGIzzFKjrPhBQ4j1BOKbYGbGO0/view?usp=sharing">Mixed-Breast-Cancer-ImageMask-Dataset-M2.zip</a>
 </li>
+
 <br>
 This is a Tiled and Non-Tiled Breast Cancer ImageMask Dataset for Image-Segmentation.<br>
 <br>
@@ -26,8 +27,8 @@ of BCSS to 512x512 tiles, and keeping the detailed features on the cancer region
 the large images and masks of BCSS 
 to 512x512, and losing a lot of detailed pixel level information of the cancer region.<br><br>
 Probably, you will have to use both Tiled and Non-Tiled Dataset mixing to train a segmentation model.
-You may use new experimental <b>Mixed-Breast-Cancer-ImageMask-Dataset</b>
- <a href="https://drive.google.com/file/d/1KBhj2Y-qywXxMXeZpRMPXKIgKT-wY4eP/view?usp=sharing">Mixed-Breast-Cancer-ImageMask-Dataset-M.zip</a>
+You may use the latest experimental <b>Mixed-Breast-Cancer-ImageMask-Dataset-M2</b>
+ <a href="https://drive.google.com/file/d/1tkGpCrHGIzzFKjrPhBQ4j1BOKbYGbGO0/view?usp=sharing">Mixed-Breast-Cancer-ImageMask-Dataset-M2.zip</a>
 <br>
 
 <br>
@@ -102,9 +103,9 @@ You can download our dataset created here from the google drive
 
 <br>
 <br>
-<b>3. Download Mixed-Image-Mask-Dataset</b><br>
+<b>3. Download Mixed-Image-Mask-Dataset-M2</b><br>
 You can download our dataset created here from the google drive 
-<a href="https://drive.google.com/file/d/1KBhj2Y-qywXxMXeZpRMPXKIgKT-wY4eP/view?usp=sharing">Mixed-Breast-Cancer-ImageMask-Dataset-M.zip</a>
+<a href="https://drive.google.com/file/d/1tkGpCrHGIzzFKjrPhBQ4j1BOKbYGbGO0/view?usp=sharing">Mixed-Breast-Cancer-ImageMask-Dataset-M2.zip</a>
 
 <br>
 <br>

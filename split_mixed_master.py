@@ -72,10 +72,10 @@ def copy(image_files, masks_dir, dataset_dir):
 
 if __name__ == "__main__":
   try:
-    images_dir = "./Mixed-BCSS-Mostly-Tumor-master/images/"
-    masks_dir  = "./Mixed-BCSS-Mostly-Tumor-master/masks/"
+    images_dir = "./Mixed-BCSS-Mostly-Tumor-master-M2/images/"
+    masks_dir  = "./Mixed-BCSS-Mostly-Tumor-master-M2/masks/"
 
-    output_dir = "./Mixed-Breast-Cancer-ImageMask-Dataset-M/"
+    output_dir = "./Mixed-Breast-Cancer-ImageMask-Dataset-M2/"
     if os.path.exists(output_dir):
       shutil.rmtree(output_dir)
     if not os.path.exists(output_dir):
