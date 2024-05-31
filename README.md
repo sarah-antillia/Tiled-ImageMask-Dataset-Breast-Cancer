@@ -25,7 +25,7 @@ of BCSS to 512x512 tiles, and keeping the detailed features on the cancer region
 <br>
 <b>Non-Tiled-ImageMask-Dataset</b> is a macroscopic annotation dataset which is created by reducing the size of 
 the large images and masks of BCSS 
-to 512x512, and losing a lot of detailed pixel level information of the cancer region.<br><br>
+to 512x512, and losing a lot of detailed pixel level information of the cancer regions.<br><br>
 Probably, you will have to use both Tiled and Non-Tiled Dataset mixing to train a segmentation model.
 You may use the latest experimental <b>Mixed-Breast-Cancer-ImageMask-Dataset-M2</b>
  <a href="https://drive.google.com/file/d/1tkGpCrHGIzzFKjrPhBQ4j1BOKbYGbGO0/view?usp=sharing">Mixed-Breast-Cancer-ImageMask-Dataset-M2.zip</a>
@@ -309,7 +309,7 @@ By this command, the following folder will be created.<br>
 
 
 <h3>6. Create Pre Augmented Non Tiled Dataset</h3>
-To create Pre-Augmented-Non-Tiled-ImageMask-Dataset from <b>BCSS-Mostly-Tumor-master</b> , please run the following command for Python script, 
+To create Pre-Augmented-Non-Tiled-ImageMask-Dataset from <b>BCSS-Mostly-Tumor-master</b>, please run the following command for Python script, 
 <a href="./PreAugmentedImageMaskDatasetGenerator.py">PreAugmentedImageMaskDatasetGenerator.py</a>.<br>
 <pre>
 >python PreAugmentedImageMaskDatasetGenerator.py
@@ -352,6 +352,53 @@ By this command, the following folder will be created.<br>
 <br>
 <b>Non-Tiled train/masks samples:</b><br>
 <img src="./asset/non-tiled-train_masks_sample.png"  width="1024" height="auto">
+<br>
+
+
+<h3>8. Create Mixed Dataset</h3>
+To create Mixed-ImageMask-Dataset, Tiled and Non-Tiled datasets are mixed, from <b>BCSS-Mostly-Tumor-master</b> , please run the following command for Python script, 
+<a href="./MixedImageMaskDatasetGenerator.py">MixedImageMaskDatasetGenerator.py</a>.<br>
+<pre>
+>python MixedImageMaskDatasetGenerator.py
+</pre>
+By this command, the following folder will be created.<br>
+<pre>
+./Mixed-BCSS-Mostly-Tumor-master-M2
+├─images       ; Pre-augmented resized to 512x512, and tiledly split to 512x512 jpg image files
+└─masks        : Pre-augmented resized to 512x512, and tiledly split to 512x512 jpg mask files
+</pre>
+
+
+<h3>7. Split Mixed master</h3>
+To split Mixed-Breast-Cancer-master to test, train, and valid sub datasets,
+ please run the following command for Python script, 
+<a href="./split_mixed-master.py">split_mixed-master.py</a>.<br>
+<pre>
+>python split_mixed-master.py
+</pre>
+By this command, the following folder will be created.<br>
+<pre>
+./Mixed-Breast-Cancer-ImageMask-Dataset-M2
+├─test
+│  ├─images
+│  └─masks
+├─train
+│  ├─images
+│  └─masks
+└─valid
+    ├─images
+    └─masks
+</pre>
+
+<b>Dataset Statistics</b><br>
+<img src="./Mixed-Breast-Cancer-ImageMask-Dataset-M2_Statistics.png" width="540" height="auto"><br>
+
+<hr>
+<b>Mixed train/images samples:</b><br>
+<img src="./asset/mixed_train_images_sample.png" width="1024" height="auto">
+<br>
+<b>Mixed train/masks samples:</b><br>
+<img src="./asset/mixed_train_masks_sample.png"  width="1024" height="auto">
 <br>
 
 <br>
